@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio SPA</title>
+    <title>Vinicius Bassi | Portfólio SPA</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header id="cabecalho">
-        <h1 class="logotipo">Meu Portfólio</h1>
+        <h1 class="logotipo">Vinicius <span>Bassi</span></h1>
         
-        <button id="botao-menu-celular">Menu</button>
-        <button id="botao-tema">Tema Escuro</button>
-
         <nav id="menu-navegacao">
             <ul class="lista-links">
                 <li><a href="#sobre" class="link-menu">Sobre mim</a></li>
@@ -22,24 +19,29 @@
                 <li><a href="#contato" class="link-menu">Contato</a></li>
             </ul>
         </nav>
+
+        <div class="controles">
+            <button id="botao-tema">Tema Escuro</button>
+            <button id="botao-menu-celular">☰ Menu</button>
+        </div>
     </header>
 
     <main>
         <section id="sobre" class="secao">
             <div class="conteudo">
                 <h2>Sobre mim</h2>
-                <p>Olá! Eu sou o Vinicius Bassi, jovem de 28 anos que programa há quase 10 anos no ecossistema .NET. Inicei a minha carreira trabalhando com ASP.NET Core, e esta base é o que me permite continuar trabalhando com aplicações web até hoje.</p>
-                <p>Estou fazendo esta faculdade para entender melhor o ambiente academico na nossa area e tambem para fazer networking. Sempre buscando abrir novos caminhos.</p>
-                <p>Tenho varios hobbies, incluindo ser pai de pet, pai de planta, aquarismo e tocar violão nas horas vagas.</p>
+                <p>Olá! Eu sou o <strong>Vinicius Bassi</strong>, jovem de 28 anos que programa há quase 10 anos no ecossistema .NET. Iniciei a minha carreira trabalhando com ASP.NET Core, e esta base é o que me permite continuar trabalhando com aplicações web até hoje.</p>
+                <p>Estou fazendo esta faculdade para entender melhor o ambiente acadêmico na nossa área e também para fazer networking. Sempre buscando abrir novos caminhos.</p>
+                <p>Tenho vários hobbies, incluindo ser pai de pet, pai de planta, aquarismo e tocar violão nas horas vagas.</p>
             </div>
         </section>
 
-        <section id="formacao" class="secao">
+        <section id="formacao" class="secao fundo-alternativo">
             <div class="conteudo">
-                <h2>Formação</h2>
+                <h2>Formação e Certificações</h2>
                 <div class="grade-cartoes">
                     <div class="cartao">
-                        <h3>Cursos</h3>
+                        <h3>Tecnologia e Educação</h3>
                         <ul>
                             <li>Bacharelado em Engenharia de Software - 2026</li>
                             <li>AWS Certified Solutions Architect – Associate</li>
@@ -47,7 +49,7 @@
                             <li>Microsoft Certified: Azure Developer Associate</li>
                             <li>Docker Mastery (Udemy - Bret Fisher)</li>
                             <li>CKAD (Certified Kubernetes Application Developer)</li>
-                            <li><a href="#portfolio">Entre outros.</a></li>
+                            <li><a href="#portfolio" class="link-destaque">Entre outros...</a></li>
                         </ul>
                     </div>
                     <div class="cartao">
@@ -64,34 +66,35 @@
         <section id="portfolio" class="secao">
             <div class="conteudo">
                 <h2>Portfólio</h2>
-                <p>Para mais informações sobre o meu portfólio e experiências profissionais, visite meu <a href="https://www.linkedin.com/in/vinicius-bassi" target="_blank">LinkedIn</a>.</p>
+                <p>Para mais informações sobre o meu portfólio, projetos e experiências profissionais, visite meu perfil profissional abaixo:</p>
+                <a href="https://www.linkedin.com/in/vinicius-bassi" target="_blank" class="botao-link">Acessar meu LinkedIn</a>
             </div>
         </section>
 
-        <section id="contato" class="secao">
+        <section id="contato" class="secao fundo-alternativo">
             <div class="conteudo">
                 <h2>Fale Comigo</h2>
                 
                 <form id="formulario-contato" class="caixa-formulario">
                     <div class="grupo-campo">
-                        <label>Nome Completo:</label>
-                        <input type="text" id="campo-nome" placeholder="Digite seu nome">
-                        <span class="mensagem-erro" id="erro-nome">Por favor, preencha o nome.</span>
+                        <label for="campo-nome">Nome Completo:</label>
+                        <input type="text" id="campo-nome" placeholder="Ex: Maria Souza">
+                        <span class="mensagem-erro" id="erro-nome">Por favor, preencha o seu nome.</span>
                     </div>
                     
                     <div class="grupo-campo">
-                        <label>E-mail:</label>
+                        <label for="campo-email">E-mail:</label>
                         <input type="text" id="campo-email" placeholder="exemplo@email.com">
-                        <span class="mensagem-erro" id="erro-email">Digite um e-mail válido com @ e ponto.</span>
+                        <span class="mensagem-erro" id="erro-email">Digite um e-mail válido contendo @ e ponto.</span>
                     </div>
                     
                     <div class="grupo-campo">
-                        <label>Mensagem:</label>
-                        <textarea id="campo-mensagem" rows="4" placeholder="Escreva aqui..."></textarea>
+                        <label for="campo-mensagem">Mensagem:</label>
+                        <textarea id="campo-mensagem" rows="5" placeholder="Como posso ajudar?"></textarea>
                         <span class="mensagem-erro" id="erro-mensagem">A mensagem não pode estar vazia.</span>
                     </div>
                     
-                    <button type="submit" class="botao-enviar">Enviar</button>
+                    <button type="submit" class="botao-enviar">Enviar Mensagem</button>
                 </form>
             </div>
         </section>
@@ -99,11 +102,12 @@
 
     <div id="janela-aviso" class="fundo-modal">
         <div class="caixa-modal">
-            <h3>Tudo certo!</h3>
-            <p>Sua mensagem foi "enviada" com sucesso.</p>
+            <h3>Mensagem Enviada!</h3>
+            <p>Obrigado pelo contato. Em breve retornarei sua mensagem.</p>
             <button id="botao-fechar-modal">Fechar</button>
         </div>
     </div>
 
+    <script src="scripts/index.js"></script>
 </body>
 </html>
