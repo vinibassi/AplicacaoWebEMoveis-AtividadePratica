@@ -1,0 +1,246 @@
+/* Variáveis de Cores Principais */
+:root {
+    --cor-fundo: #f4f4f9;
+    --cor-texto: #333333;
+    --cor-cabecalho: #ffffff;
+    --cor-cartao: #ffffff;
+    --cor-destaque: #0056b3;
+    --cor-erro: #d9534f;
+}
+
+/* Cores quando o Tema Escuro estiver ativo */
+body.tema-escuro {
+    --cor-fundo: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-cabecalho: #222222;
+    --cor-cartao: #333333;
+    --cor-destaque: #4da3ff;
+}
+
+/* Reset básico para tirar margens indesejadas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Rolagem suave ao clicar no menu */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho Fixo */
+#cabecalho {
+    background-color: var(--cor-cabecalho);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    z-index: 100;
+}
+
+.logotipo {
+    color: var(--cor-destaque);
+    font-size: 24px;
+}
+
+/* Menu de Navegação */
+.lista-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+
+.link-menu:hover {
+    color: var(--cor-destaque);
+}
+
+/* Botões do Cabeçalho */
+#botao-tema, #botao-menu-celular {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#botao-menu-celular {
+    display: none;
+}
+
+/* Seções e Conteúdo */
+.secao {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: var(--cor-destaque);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Para organizar a seção de formação lado a lado */
+.grade-cartoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.cartao {
+    background-color: var(--cor-cartao);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 350px;
+    text-align: left;
+}
+
+.cartao ul {
+    margin-left: 20px;
+}
+
+/* Links em geral (como o do LinkedIn) */
+a {
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+/* Formulário de Contato */
+.caixa-formulario {
+    background-color: var(--cor-cartao);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grupo-campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mensagem-erro {
+    color: var(--cor-erro);
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+}
+
+.botao-enviar {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* Janela Modal de Aviso */
+.fundo-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.caixa-modal {
+    background-color: var(--cor-cartao);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#botao-fechar-modal {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Responsividade (Celular) */
+@media (max-width: 600px) {
+    #botao-menu-celular {
+        display: inline-block;
+    }
+
+    .lista-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-cabecalho);
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lista-links.aberto {
+        display: flex;
+    }
+    
+    .lista-links li {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

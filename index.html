@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio SPA</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header id="cabecalho">
-        <h1>Meu Portfólio</h1>
+        <h1 class="logotipo">Meu Portfólio</h1>
         
         <button id="botao-menu-celular">Menu</button>
         <button id="botao-tema">Tema Escuro</button>
 
         <nav id="menu-navegacao">
-            <ul>
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <ul class="lista-links">
+                <li><a href="#sobre" class="link-menu">Sobre mim</a></li>
+                <li><a href="#formacao" class="link-menu">Formação</a></li>
+                <li><a href="#portfolio" class="link-menu">Portfólio</a></li>
+                <li><a href="#contato" class="link-menu">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="sobre">
-            <div>
+        <section id="sobre" class="secao">
+            <div class="conteudo">
                 <h2>Sobre mim</h2>
                 <p>Olá! Eu sou o Vinicius Bassi, jovem de 28 anos que programa há quase 10 anos no ecossistema .NET. Inicei a minha carreira trabalhando com ASP.NET Core, e esta base é o que me permite continuar trabalhando com aplicações web até hoje.</p>
                 <p>Estou fazendo esta faculdade para entender melhor o ambiente academico na nossa area e tambem para fazer networking. Sempre buscando abrir novos caminhos.</p>
@@ -33,23 +34,23 @@
             </div>
         </section>
 
-        <section id="formacao">
-            <div>
+        <section id="formacao" class="secao">
+            <div class="conteudo">
                 <h2>Formação</h2>
-                <div>
-                    <div>
+                <div class="grade-cartoes">
+                    <div class="cartao">
                         <h3>Cursos</h3>
                         <ul>
                             <li>Bacharelado em Engenharia de Software - 2026</li>
-                            <li>AWS Certified Solutions Architect – Associate: O ponto de partida ideal. Ensina a desenhar sistemas distribuídos, escaláveis e seguros na AWS.</li>
-                            <li>AWS Certified Developer – Associate: Focado em desenvolvimento, uso de APIs da AWS e serviços como Lambda, DynamoDB e API Gateway.</li>
-                            <li>Microsoft Certified: Azure Developer Associate: A principal escolha se o seu ecossistema for fortemente baseado em tecnologias Microsoft e .NET.</li>
-                            <li>Docker Mastery (Udemy - Bret Fisher): Um dos cursos mais completos e práticos para aprender do zero ao avançado em criação e gestão de containers.</li>
-                            <li>CKAD (Certified Kubernetes Application Developer): Certificação da Linux Foundation.</li>
+                            <li>AWS Certified Solutions Architect – Associate</li>
+                            <li>AWS Certified Developer – Associate</li>
+                            <li>Microsoft Certified: Azure Developer Associate</li>
+                            <li>Docker Mastery (Udemy - Bret Fisher)</li>
+                            <li>CKAD (Certified Kubernetes Application Developer)</li>
                             <li><a href="#portfolio">Entre outros.</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="cartao">
                         <h3>Idiomas</h3>
                         <ul>
                             <li>Português (Nativo)</li>
@@ -60,44 +61,44 @@
             </div>
         </section>
 
-        <section id="portfolio">
-            <div>
+        <section id="portfolio" class="secao">
+            <div class="conteudo">
                 <h2>Portfólio</h2>
-                <p>Para mais informações sobre o meu portfólio e experiências profissionais, visite meu <a href="https://www.linkedin.com/in/vinicius-bassi">LinkedIn</a>.</p>
+                <p>Para mais informações sobre o meu portfólio e experiências profissionais, visite meu <a href="https://www.linkedin.com/in/vinicius-bassi" target="_blank">LinkedIn</a>.</p>
             </div>
         </section>
 
-        <section id="contato">
-            <div>
+        <section id="contato" class="secao">
+            <div class="conteudo">
                 <h2>Fale Comigo</h2>
                 
-                <form id="formulario-contato">
-                    <div>
+                <form id="formulario-contato" class="caixa-formulario">
+                    <div class="grupo-campo">
                         <label>Nome Completo:</label>
                         <input type="text" id="campo-nome" placeholder="Digite seu nome">
-                        <span id="erro-nome">Por favor, preencha o nome.</span>
+                        <span class="mensagem-erro" id="erro-nome">Por favor, preencha o nome.</span>
                     </div>
                     
-                    <div>
+                    <div class="grupo-campo">
                         <label>E-mail:</label>
                         <input type="text" id="campo-email" placeholder="exemplo@email.com">
-                        <span id="erro-email">Digite um e-mail válido com @ e ponto.</span>
+                        <span class="mensagem-erro" id="erro-email">Digite um e-mail válido com @ e ponto.</span>
                     </div>
                     
-                    <div>
+                    <div class="grupo-campo">
                         <label>Mensagem:</label>
                         <textarea id="campo-mensagem" rows="4" placeholder="Escreva aqui..."></textarea>
-                        <span id="erro-mensagem">A mensagem não pode estar vazia.</span>
+                        <span class="mensagem-erro" id="erro-mensagem">A mensagem não pode estar vazia.</span>
                     </div>
                     
-                    <button type="submit">Enviar</button>
+                    <button type="submit" class="botao-enviar">Enviar</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <div id="janela-aviso">
-        <div>
+    <div id="janela-aviso" class="fundo-modal">
+        <div class="caixa-modal">
             <h3>Tudo certo!</h3>
             <p>Sua mensagem foi "enviada" com sucesso.</p>
             <button id="botao-fechar-modal">Fechar</button>
